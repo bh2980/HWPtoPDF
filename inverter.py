@@ -1,7 +1,7 @@
 from glob import glob
 import win32com.client as win32
 
-file = glob(r"C:\Users\bh2980\Desktop\test\*.hwp")
+file = glob(r"경로")
 
 hwp=win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
 
