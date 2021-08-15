@@ -27,6 +27,9 @@ def hwpToPdf(file, path):
 
         hwp=win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
 
+        print("프로그램 장제 종료를 원할 경우 cmd 창을 닫아주세요.\n")
+        print("-------------------------------------------------------")
+
         for i in file:
             hwp.Open(i)
             i = i.split('\\')
@@ -35,6 +38,8 @@ def hwpToPdf(file, path):
             print("변환 완료 :", path + '/' + i[0])
 
         hwp.Quit()
+
+        print("-------------------------변환 완료!-------------------------\n")
 
         return
 
